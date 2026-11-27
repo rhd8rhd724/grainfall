@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grainfall</title>
+  <meta name="description" content="A falling-sand physics sandbox in plain JavaScript.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="bar">
+      <h1>Grainfall</h1>
+      <p class="hint">Draw with the mouse · right-click erases · <kbd>Space</kbd> pause · <kbd>C</kbd> clear · <kbd>0</kbd>–<kbd>9</kbd> pick</p>
+    </header>
+
+    <div class="stage">
+      <canvas id="sim" aria-label="Falling sand simulation"></canvas>
+    </div>
+
+    <section class="controls">
+      <div id="palette" class="palette" role="toolbar" aria-label="Elements"></div>
+      <label class="brush">Brush <input id="brush" type="range" min="1" max="12" value="4"></label>
+      <div class="actions">
+        <button id="pause" type="button">Pause</button>
+        <button id="demo" type="button">Demo</button>
+        <button id="clear" type="button">Clear</button>
+      </div>
+      <output id="stats" class="stats"></output>
+    </section>
+  </main>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
